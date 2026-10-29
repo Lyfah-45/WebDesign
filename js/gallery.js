@@ -1,4 +1,3 @@
-// Gallery lightbox: selection, preview, next/previous, keyboard support
 document.addEventListener("DOMContentLoaded", () => {
   const links = Array.from(document.querySelectorAll(".gallery-link"));
   const modalEl = document.getElementById("lightbox");
