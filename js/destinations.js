@@ -1,4 +1,3 @@
-// Destinations page: category filter and quick-view modal
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".filter-btn");
   const items = document.querySelectorAll(".dest-item");
