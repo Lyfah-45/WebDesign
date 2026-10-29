@@ -1,12 +1,9 @@
-// Form validation for the booking and registration forms.
-// Uses HTML5 attributes plus custom JavaScript rules and messages.
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("bookingForm") || document.getElementById("registerForm");
   if (!form) return;
   const isRegister = form.id === "registerForm";
   const alertBox = document.getElementById("formAlert");
 
-  // Each rule returns an error message, or "" when the value is valid.
   const rules = {
     fullName: v => !v.trim() ? "Enter your full name."
       : !/^[A-Za-z][A-Za-z\s'-]{2,}$/.test(v.trim()) ? "Use letters only, at least 3 characters." : "",
@@ -55,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return ok;
   }
 
-  // Live feedback after the user leaves a field, then as they correct it
   form.querySelectorAll("input:not([type=radio]), select").forEach(input => {
     input.addEventListener("blur", () => validateField(input));
     input.addEventListener("input", () => {
