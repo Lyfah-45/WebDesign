@@ -1,0 +1,99 @@
+:root {
+  --night: #12263f;
+  --blue: #1b4f8a;
+  --green: #0a7a45;
+  --ochre: #c8821e;
+  --snow: #f6f8fb;
+  --ink: #1d2733;
+  --radius: .75rem;
+  --shadow: 0 6px 18px rgba(18, 38, 63, .12);
+}
+html { scroll-behavior: smooth; }
+body { font-family: "Nunito Sans", system-ui, sans-serif; color: var(--ink); background: cadetblue; line-height: 1.65; padding-top: 0; }
+h1, h2, h3, h4, .navbar-brand { font-family: "Fraunces", Georgia, serif; font-weight: 800; color: var(--night); }
+a { color: var(--blue); }
+a:focus-visible, button:focus-visible, .form-control:focus-visible { outline: 3px solid var(--ochre); outline-offset: 2px; }
+
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--ochre); color: #000; padding: .6rem 1rem; z-index: 2000; }
+.skip-link:focus { left: 0; }
+
+.site-nav { background: rgba(18, 38, 63, .96); transition: padding .3s ease, box-shadow .3s ease; padding: .9rem 0; }
+.site-nav.scrolled { padding: .45rem 0; box-shadow: var(--shadow); }
+.site-nav .navbar-brand { color: #fff; font-size: 1.5rem; }
+.site-nav .navbar-brand span, .footer-brand span { color: var(--ochre); }
+.site-nav .nav-link { color: #dbe5f1; font-weight: 600; transition: color .2s; }
+.site-nav .nav-link:hover, .site-nav .nav-link.active { color: #fff; }
+.site-nav .nav-link.active { box-shadow: inset 0 -3px 0 var(--ochre); }
+.navbar-toggler { border-color: rgba(255,255,255,.5); }
+.navbar-toggler-icon { filter: invert(1); }
+.dropdown-item:active { background: var(--blue); }
+
+.btn-lesotho { background: var(--green); color: #fff; border: 2px solid var(--green); font-weight: 700; border-radius: 2rem; padding-inline: 1.4rem; transition: transform .2s, background .2s; }
+.btn-lesotho:hover { background: #086637; border-color: #086637; color: #fff; transform: translateY(-2px); }
+.btn-outline-lesotho { color: var(--green); border: 2px solid var(--green); font-weight: 700; border-radius: 2rem; background: transparent; transition: background .2s, color .2s; }
+.btn-outline-lesotho:hover, .btn-outline-lesotho.active { background: var(--green); color: #fff; }
+.badge-lesotho { background: #fdf0d9; color: #7a4a05; font-weight: 700; }
+
+.blanket-stripe { height: 14px; background: repeating-linear-gradient(90deg, var(--ochre) 0 40px, var(--night) 40px 52px, var(--green) 52px 92px, #fff 92px 100px, var(--blue) 100px 140px, var(--night) 140px 152px); }
+
+.hero { position: relative; background: var(--night); }
+.hero .carousel-item img { height: 100vh; min-height: 520px; max-height: 760px; object-fit: cover; filter: brightness(.7); }
+.hero-overlay { position: absolute; inset: 0; display: flex; align-items: center; pointer-events: none; }
+.hero-overlay .container { pointer-events: auto; color: #fff; padding-top: 4rem; }
+.hero-overlay h1 { color: #fff; font-size: clamp(2.4rem, 7vw, 4.8rem); max-width: 14ch; line-height: 1.05; text-shadow: 0 3px 16px rgba(0,0,0,.4); }
+.hero-overlay .lead { max-width: 36rem; margin: 1rem 0 1.6rem; }
+.carousel-indicators { z-index: 3; }
+
+.page-hero { background: var(--night); color: #fff; padding: 9rem 0 3rem; position: relative; }
+.page-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); }
+.page-hero .lead { color: #c9d6e6; max-width: 40rem; }
+.page-hero .blanket-stripe { position: absolute; left: 0; right: 0; bottom: 0; }
+
+.section { padding: 4rem 0; }
+.section-alt { background: var(--snow); }
+.section-title { font-size: clamp(1.6rem, 3.5vw, 2.3rem); margin-bottom: 1.5rem; }
+
+.dest-card { border: 1px solid #e2e8f0; border-radius: var(--radius); overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
+.dest-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.dest-card .card-img-top { aspect-ratio: 3 / 2; object-fit: cover; }
+.check-list { list-style: none; padding: 0; }
+.check-list li { padding-left: 1.8rem; margin-bottom: .5rem; position: relative; }
+.check-list li::before { content: "\2713"; position: absolute; left: 0; color: var(--green); font-weight: 800; }
+.fact { background: #fff; border-top: 4px solid #000; border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.2rem .8rem; height: 100%; font-size: .95rem; }
+.fact span { display: block; font-family: "Fraunces", serif; font-weight: 800; font-size: 1.35rem; color: var(--blue); }
+
+.rates-table caption { caption-side: top; font-weight: 600; color: #4a5a6b; }
+.rates-table thead { background: var(--night); color: #fff; }
+.accordion-lesotho .accordion-button:not(.collapsed) { background: #e8f3ee; color: var(--green); box-shadow: none; }
+.accordion-lesotho .accordion-item { border-radius: var(--radius); overflow: hidden; margin-bottom: .6rem; border: 1px solid #e2e8f0; }
+.pagination-lesotho .page-link { color: var(--green); }
+.pagination-lesotho .active .page-link { background: var(--green); border-color: var(--green); color: #fff; }
+
+.gallery-item { position: relative; overflow: hidden; border-radius: var(--radius); }
+.gallery-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .4s ease; }
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; background: linear-gradient(transparent, rgba(0,0,0,.75)); color: #fff; padding: 1.5rem .8rem .6rem; font-weight: 600; font-size: .9rem; }
+.lb-btn { position: absolute; top: 45%; background: rgba(255,255,255,.18); color: #fff; border: 0; width: 3rem; height: 3rem; border-radius: 50%; font-size: 1.2rem; transition: background .2s; z-index: 5; }
+.lb-btn:hover { background: var(--ochre); }
+.lb-prev { left: 1rem; } .lb-next { right: 1rem; }
+#lbImg { max-height: 70vh; }
+
+.form-label { font-weight: 700; }
+.form-control, .form-select { border-radius: .5rem; padding: .65rem .85rem; border-width: 2px; }
+.form-control:focus, .form-select:focus { border-color: var(--green); box-shadow: 0 0 0 .2rem rgba(10,122,69,.2); }
+
+.site-footer { background: var(--night); color: #c9d6e6; }
+.site-footer a { color: #fff; text-decoration: none; }
+.site-footer a:hover { color: var(--ochre); text-decoration: underline; }
+.site-footer h3, .footer-brand { color: #fff; }
+
+.back-to-top { position: fixed; right: 1rem; bottom: 1rem; width: 3rem; height: 3rem; padding: 0; border-radius: 50%; z-index: 1000; box-shadow: var(--shadow); }
+
+@media (max-width: 767.98px) {
+  .section { padding: 2.5rem 0; }
+  .page-hero { padding-top: 7rem; }
+  .hero .carousel-item img { height: 85vh; }
+  .lb-btn { width: 2.4rem; height: 2.4rem; }
+}
+@media (min-width: 1400px) { .container { max-width: 1240px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
