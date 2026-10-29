@@ -1,4 +1,3 @@
-// Shared behaviour: shrinking navbar and back-to-top button
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".site-nav");
   const topBtn = document.getElementById("backToTop");
